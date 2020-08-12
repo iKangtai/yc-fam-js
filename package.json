@@ -1,0 +1,27 @@
+{
+  "name": "yc-fam-js",
+  "version": "1.0.1",
+  "description": "孕橙 FAM 算法 JavaScript SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iKangtai/yc-fam-js.git"
+  },
+  "keywords": [
+    "FAM"
+  ],
+  "author": "luopk@ikangtai.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iKangtai/yc-fam-js/issues"
+  },
+  "homepage": "https://github.com/iKangtai/yc-fam-js#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "js-sha1": "^0.6.0",
+    "md5": "^2.3.0"
+  }
+}
