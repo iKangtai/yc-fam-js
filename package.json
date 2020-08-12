@@ -1,15 +1,20 @@
 {
   "name": "yc-fam-js",
-  "version": "1.0.1",
+  "version": "1.0.11",
   "description": "孕橙 FAM 算法 JavaScript SDK",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "./node_modules/.bin/mocha --require @babel/register",
+    "release": "npm run test && npm --no-git-tag-version version patch && npm publish"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iKangtai/yc-fam-js.git"
   },
+  "files": [
+    "index.js",
+    "lib"
+  ],
   "keywords": [
     "FAM"
   ],
@@ -23,5 +28,15 @@
     "axios": "^0.19.2",
     "js-sha1": "^0.6.0",
     "md5": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/polyfill": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
+    "lodash": "^4.17.19",
+    "mocha": "^8.1.1",
+    "uuid": "^8.3.0"
   }
 }
