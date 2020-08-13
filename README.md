@@ -1,28 +1,30 @@
 # YunCheng FAM 算法 JavaScript SDK 说明文档
 
-## Installing
+[English](./README.en-US.md) | 简体中文
 
-Using npm:
+## 安装
+
+使用 npm:
 
 ```bash
 $ npm install yc-fam-js
 ```
 
-Using bower:
+使用 bower:
 
 ```bash
 $ bower install yc-fam-js
 ```
 
-Using yarn:
+使用 yarn:
 
 ```bash
 $ yarn add yc-fam-js
 ```
 
-## Example
+## FAM 算法请求示例
 
-Get FAM Result
+### Node & Browser
 
 ```js
 import YCFam from 'yc-fam-js'
@@ -76,14 +78,27 @@ async function testFAMDays() {
 testFAMDays()
 ```
 
-## yc-fam-js API
+### 小程序
 
-##### FAM class define
+小程序基础库版本需要在 2.2.1 或以上，使用 npm 安装第三方包的方法详见小程序开发文档 [npm 支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)。
+
+示例 [代码片段](https://developers.weixin.qq.com/s/1Bv3jzmb7rjy)
+
+#### 注意事项
+
+- 需要把算法的服务器地址 `https://saas.shecarefertility.com` 添加到小程序合法域名列表里；
+- 算法库使用了 Promise，需要小程序开启 `ES6 转 ES5`，否则会报错 `Unexpected identifier` 不能编译；
+- 代码片段里使用了 async/await，需要小程序开启 `增强编译`，否则在部分小程序基础库会报错 `ReferenceError: regeneratorRuntime is not defined` 不能编译；
+- 代码片段使用 npm 方式集成算法库，运行前需要点击开发者工具中的菜单栏 `工具 --> 构建 npm` 才能正常编译、运行。运行成功后，算法结果输出在控制台。
+
+## 算法库 API
+
+### FAM 类定义
 
 ```js
 class YCFam {
   /**
-   *
+   * 实例化算法对象
    * @param {String} appId 应用 Id，由 yuncheng 分配
    * @param {String} appSecret 应用密钥，由 yuncheng 分配
    * @param {String} unionId 用户唯一标识符。同一个应用內，两个用户不能重复
@@ -92,7 +107,7 @@ class YCFam {
 }
 ```
 
-##### Start a FAM algorithm request
+### FAM 算法请求入口
 
 ```js
 /**
@@ -106,8 +121,8 @@ getFAMDays(debugId, input)
 
 ## Promises
 
-yc-fam-js depends on a native ES6 Promise implementation to be [supported](http://caniuse.com/promises).
-If your environment doesn't support ES6 Promises, you can [polyfill](https://github.com/jakearchibald/es6-promise).
+yc-fam-js 依赖 ES6 Promise，详见 [supported](http://caniuse.com/promises)。
+如果你的环境不支持 Promise，可以 [polyfill](https://github.com/jakearchibald/es6-promise).
 
 ## License
 
