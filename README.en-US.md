@@ -10,18 +10,6 @@ Using npm:
 $ npm install yc-fam-js
 ```
 
-Using bower:
-
-```bash
-$ bower install yc-fam-js
-```
-
-Using yarn:
-
-```bash
-$ yarn add yc-fam-js
-```
-
 ## Algorithm Request Example
 
 ### Node & Browser
@@ -49,7 +37,6 @@ let alInput = {
       ovulationResultByLH: 0,
       cervicalMunusRecord: 0,
       timestamp: 1461902400,
-      dayOfCycle: 0,
       menstruationRecord: 1
     },
     {
@@ -59,7 +46,6 @@ let alInput = {
       ovulationResultByLH: 0,
       cervicalMunusRecord: 0,
       timestamp: 1461988800,
-      dayOfCycle: 0,
       menstruationRecord: 1
     }
   ]
