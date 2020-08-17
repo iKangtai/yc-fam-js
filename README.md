@@ -14,55 +14,7 @@ $ npm install yc-fam-js
 
 ### Node 和浏览器环境的请求示例
 
-```js
-import YCFam from 'yc-fam-js'
-
-// YCFam instance need `appId, appSecret, unionId`
-let fam = new YCFam('100200', '6e1b1049a9486d49ba015af00d5a0', 'luopk@ikangtai.com')
-// FAM algorithm input
-let alInput = {
-  debug: 0,
-  userData: {
-    userAverageCycleLength: 28,
-    userCycleLengthError: 1,
-    userCycleRegularity: 1,
-    userAverageMenstruationLength: 5,
-    userAverageLuteumLength: 14
-  },
-  daysInput: [
-    {
-      impactTempFlag: 0,
-      BBT: 0,
-      ovulationResultByUser: 0,
-      ovulationResultByLH: 0,
-      cervicalMunusRecord: 0,
-      timestamp: 1461902400,
-      menstruationRecord: 1
-    },
-    {
-      impactTempFlag: 0,
-      BBT: 0,
-      ovulationResultByUser: 0,
-      ovulationResultByLH: 0,
-      cervicalMunusRecord: 0,
-      timestamp: 1461988800,
-      menstruationRecord: 1
-    }
-  ]
-}
-
-async function testFAMDays() {
-  let debugId = 'uuid' // This param should be UUID
-  try {
-    const { data } = await fam.getFAMDays(debugId, alInput)
-    console.log(data)
-  } catch (error) {
-    console.error(error)
-  }
-}
-
-testFAMDays()
-```
+请求示例见 <https://github.com/iKangtai/yc-fam-js-demo.git>
 
 ### 小程序请求示例
 
@@ -130,7 +82,7 @@ getFAMDays(debugId, input)
       cervicalMunusRecord: 0, // 当天的宫颈粘液打分，打分标准见备注，默认 0
       timestamp: 1461902400, // 当天的时间戳，注意其时分秒需要设置为 12:00:00，必填
       dayOfCycle: 0, // 已废弃，不需要填写
-      menstruationRecord: 1 // 经期记录，注意：孕橙算法不区分开始和结束。取值说明见备注，默认 0
+      menstruationRecord: 1 // 经期记录，注意：算法不区分开始和结束。取值说明见备注，默认 0
     },
     ...
   ]
@@ -139,17 +91,15 @@ getFAMDays(debugId, input)
 
 备注：
 
-- 宫颈粘液打分说明
+- cervicalMunusRecord 宫颈粘液打分说明
   - 无数据：0
   - 干燥：1
   - 潮湿：2
   - 粘稠：3
   - 蛋清/水状：4
-- 经期记录取值说明
+- menstruationRecord 经期记录取值说明
   - 无数据：0
-  - 经期流血：10  注意：如果用户输入的是 “经期开始和结束”，在调用孕橙算法的时候，只需要把开始和结束内的日期都标记成 10 即可
-  - 孕期开始：15
-  - 孕期结束：17
+  - 经期流血：10  注意：如果用户输入的是 “经期开始和结束”，在调用算法的时候，只需要把开始和结束内的日期都标记成 10 即可
 
 ### 算法返回值说明
 
