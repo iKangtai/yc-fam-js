@@ -2,12 +2,18 @@
 
 [English](./README.en-US.md) | 简体中文
 
-## 安装方法
+## 安装和更新方法
 
-使用 npm:
+使用 npm 安装:
 
 ```bash
 $ npm install yc-fam-js
+```
+
+使用 npm 更新:
+
+```bash
+$ npm update yc-fam-js
 ```
 
 ## FAM 算法请求示例
@@ -20,7 +26,7 @@ $ npm install yc-fam-js
 
 小程序基础库版本需要在 2.2.1 或以上，使用 npm 安装第三方包的方法详见小程序开发文档 [npm 支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)。
 
-请求示例见 [代码片段](https://developers.weixin.qq.com/s/exBX2zmp7Aj8)
+请求示例见 [代码片段](https://developers.weixin.qq.com/s/2WMwQRm875jF)
 
 #### 小程序注意事项
 
