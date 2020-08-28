@@ -22,6 +22,7 @@ let fam = new YCFam('100200', '6e1b1049a9486d49ba015af00d5a0', 'luopk@ikangtai.c
 // FAM algorithm input
 let alInput = {
   debug: 0,
+  param: { version: 1 },
   userData: {
     userAverageCycleLength: 28,
     userCycleLengthError: 1,
@@ -37,7 +38,7 @@ let alInput = {
       ovulationResultByLH: 0,
       cervicalMunusRecord: 0,
       timestamp: 1461902400,
-      menstruationRecord: 1
+      menstruationRecord: 10
     },
     {
       impactTempFlag: 0,
@@ -46,7 +47,7 @@ let alInput = {
       ovulationResultByLH: 0,
       cervicalMunusRecord: 0,
       timestamp: 1461988800,
-      menstruationRecord: 1
+      menstruationRecord: 10
     }
   ]
 }

@@ -26,7 +26,7 @@ $ npm update yc-fam-js
 
 小程序基础库版本需要在 2.2.1 或以上，使用 npm 安装第三方包的方法详见小程序开发文档 [npm 支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)。
 
-请求示例见 [代码片段](https://developers.weixin.qq.com/s/2WMwQRm875jF)
+请求示例见 [代码片段](https://developers.weixin.qq.com/s/BBs98WmE7zjY)
 
 #### 小程序注意事项
 
@@ -70,6 +70,7 @@ getFAMDays(debugId, input)
 ```js
 {
   debug: 0, // 算法打开调试状态，默认 0
+  param: { version: 1 }, // 算法版本号，传 1 即可
   userData: // 用户的基础信息，Object
   {
     userAverageCycleLength: 28, // 平均周期长度，整数，单位 天，默认 28，必填
@@ -88,7 +89,7 @@ getFAMDays(debugId, input)
       cervicalMunusRecord: 0, // 当天的宫颈粘液打分，打分标准见备注，默认 0
       timestamp: 1461902400, // 当天的时间戳，注意其时分秒需要设置为 12:00:00，必填
       dayOfCycle: 0, // 已废弃，不需要填写
-      menstruationRecord: 1 // 经期记录，注意：算法不区分开始和结束。取值说明见备注，默认 0
+      menstruationRecord: 10 // 经期记录，注意：算法不区分开始和结束。取值说明见备注，默认 0
     },
     ...
   ]

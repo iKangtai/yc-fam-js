@@ -10,6 +10,7 @@ const fam = new YCFam(
 )
 const alInput = {
   debug: 0,
+  param: { version: 1 },
   userData: {
     userAverageCycleLength: 28,
     userCycleLengthError: 1,
@@ -25,7 +26,7 @@ const alInput = {
       ovulationResultByLH: 0,
       cervicalMunusRecord: 0,
       timestamp: 1461902400,
-      menstruationRecord: 1
+      menstruationRecord: 10
     },
     {
       impactTempFlag: 0,
@@ -34,7 +35,7 @@ const alInput = {
       ovulationResultByLH: 0,
       cervicalMunusRecord: 0,
       timestamp: 1461988800,
-      menstruationRecord: 1
+      menstruationRecord: 10
     }
   ]
 }

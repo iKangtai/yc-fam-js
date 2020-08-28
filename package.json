@@ -1,6 +1,6 @@
 {
   "name": "yc-fam-js",
-  "version": "1.0.22",
+  "version": "1.1.2",
   "description": "孕橙 FAM 算法 JavaScript SDK",
   "main": "index.js",
   "scripts": {
